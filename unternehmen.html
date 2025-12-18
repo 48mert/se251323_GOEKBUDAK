@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Unternehmensübersicht: Universitätsklinikum St. Pölten und IT-Kontext">
+  <meta name="author" content="Mert Gökbudak">
+  <title>Unternehmensübersicht</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <a href="projekt.html">Projektübersicht</a>
+        <a href="unternehmen.html">Unternehmensübersicht</a>
+        <a href="ziel.html">Ziel des Projekts</a>
+        <a href="warum.html">Warum dieses Projekt?</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Unternehmensübersicht</h1>
+
+      <section class="card">
+        <h4>Interaktive Projektansicht</h4>
+
+        <p id="infoText">Klicke auf den Button, um das Bild ein- oder auszublenden.</p>
+
+        <button id="toggleProcess" type="button"
+          data-show="Luftaufnahme anzeigen"
+          data-hide="Luftaufnahme ausblenden">
+          Luftaufnahme anzeigen
+        </button>
+
+        <figure id="processFigure" class="process-collapsed figure-center">
+          <img src="images/ukstp.png" alt="Das Universitätsklinikum St. Pölten" width="900" height="500">
+          <figcaption>Universitätsklinikum St. Pölten (Standort & Kontext der Prozessanalyse).</figcaption>
+        </figure>
+      </section>
+
+      <h2>Partnerorganisation und Umfeld</h2>
+      <p>
+        Das Projekt findet im Umfeld der NÖ Landesgesundheitsagentur statt, konkret in der IT-Abteilung des
+        Universitätsklinikums St. Pölten. In einer Krankenhaus-IT treffen sehr unterschiedliche Anforderungen
+        aufeinander: Klinische Fachbereiche, medizintechnische Systeme, Hersteller, Security-Vorgaben sowie
+        Netzwerk- und Schnittstellenmanagement, wodurch viele Übergaben zwischen Rollen entstehen.
+      </p>
+
+      <h2>IT-Abteilung als Schnittstelle zwischen Rollen</h2>
+      <p>
+        Die IT-Abteilung verbindet verschiedene technische und organisatorische Bereiche: Interne Teams
+        (z.B. MED-IT, Netzwerk, 1st Level, 2nd Level), sowie externe Partner wie Hersteller oder Lieferanten. Bei Systemeinführungen
+        sind häufig spezifische Informationspakete notwendig, etwa Anforderungen an Schnittstellen (z.B. HL7, DICOM),
+        benötigte Ports, Firewall-Freigaben, Rollen- und Rechtekonzepte sowie Verantwortlichkeiten.
+      </p>
+
+      <h3>Warum das für den Alltag wichtig ist</h3>
+      <p>
+        Neben Projekten betrifft die Informationsweitergabe auch Onboarding-Prozesse. Neue Mitarbeitende profitieren von
+        einer transparenten Darstellung der Zuständigkeiten und wie die Informationsübergabe abläuft.
+      </p>
+
+      <h3>Beispieltopologie eines Teilsystems</h3>
+      <figure class="card figure-center">
+        <img src="images/kis.png" alt="Symbolbild: Topologie einer IT-Infrastruktur in einem Krankenhaus" width="600" height="400">
+        <figcaption>Symbolbild: Topologie einer IT-Infrastruktur (Teilausschnitt).</figcaption>
+      </figure>
+    </main>
+
+    <footer>
+      <p>
+        Homepage des Universitätsklinikum St. Pölten:
+        <a href="https://stpoelten.lknoe.at/" target="_blank">Homepage des UK St. Pölten</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+
+</html>

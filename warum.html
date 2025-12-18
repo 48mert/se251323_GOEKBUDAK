@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Warum das Projekt nötig ist: Probleme in der Informationsweitergabe und Nutzen einer IST-Analyse.">
+  <meta name="author" content="Mert Gökbudak">
+  <title>Warum dieses Projekt?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <a href="projekt.html">Projektübersicht</a>
+        <a href="unternehmen.html">Unternehmensübersicht</a>
+        <a href="ziel.html">Ziel des Projekts</a>
+        <a href="warum.html">Warum dieses Projekt?</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Warum dieses Projekt?</h1>
+
+      <section class="card">
+        <h2>Interaktive Projektansicht</h2>
+
+        <p id="infoText">Wähle einen Abschnitt oder einen Zusatzfokus:</p>
+
+        <div class="controls">
+          <button type="button" id="btnIst">IST-Probleme</button>
+          <button type="button" id="btnQuestions">Fragestellungen</button>
+          <button type="button" id="btnValue">Mehrwert</button>
+
+          <label for="analysisSelect">Zusatzfokus:</label>
+          <select id="analysisSelect">
+            <option value="">Bitte wählen</option>
+            <option value="schnittstellen">Schnittstellen</option>
+            <option value="rollen">Rollen & Zuständigkeiten</option>
+            <option value="onboarding">Onboarding</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>IST-Prozess: Informationsweitergabe</h3>
+
+        <p>
+          Die folgende Darstellung zeigt den vollständigen IST-Prozess der Informationsweitergabe innerhalb der IT-Abteilung.
+        </p>
+
+        <button id="toggleProcess" type="button"
+          data-show="Prozessgrafik anzeigen"
+          data-hide="Prozessgrafik ausblenden">
+          Prozessgrafik anzeigen
+        </button>
+
+        <figure id="processFigure" class="process-collapsed figure-center">
+          <img src="images/ist-zustand.png" alt="IST-Prozess der Informationsweitergabe in der Krankenhaus-IT" width="1200" height="3000">
+          <figcaption>Derzeitige Visualisierung des IST-Prozesses (aktueller Stand, noch in Bearbeitung)</figcaption>
+        </figure>
+      </section>
+
+      <h2>IST-Probleme in der Informationsweitergabe</h2>
+      <p>
+        Der zentrale Grund für dieses Projekt ist, dass aktuell kein standardisierter Ablauf für die Informationsweitergabe
+        bei der Einführung neuer IT-Subsysteme existiert. Übergaben erfolgen fallweise über Tickets, E-Mails oder Meetings.
+        Das führt zu Unklarheiten, Verzögerungen und wiederholten Rückfragen.
+      </p>
+
+      <p>
+        Besonders kritisch ist es, wenn Anforderungen zu Schnittstellen und Infrastruktur (z.B.
+        <a href="https://academy.technikum-wien.at/ratgeber/was-ist-hl7/" target="_blank">HL7</a>,
+        <a href="https://flexikon.doccheck.com/de/DICOM" target="_blank">DICOM</a>
+        oder Firewall-Freigaben) unvollständig oder verspätet weitergegeben werden.
+      </p>
+
+      <h3>Fragestellungen, die beantwortet werden sollen</h3>
+      <ul>
+        <li>Wie läuft die Informationsweitergabe zwischen den beteiligten Rollen aktuell ab?</li>
+        <li>Welche Informationspakete (z.B. Ports, Schnittstellen, Rollenrechte) werden wann und an wen übergeben?</li>
+        <li>Wie transparent ist der Prozess für alle Beteiligten?</li>
+        <li>Wo gehen im aktuellen Ablauf Informationen verloren oder werden zu spät weitergegeben?</li>
+      </ul>
+
+      <p>
+        Zusätzlich wird beobachtet, wie eine klare Struktur die Einarbeitung neuer Mitarbeitender unterstützen kann,
+        indem Zuständigkeiten und Ansprechpartner schneller erkennbar werden.
+      </p>
+
+      <h3>Mehrwert für Projekte und Onboarding</h3>
+      <p>
+        Ein dokumentierter und visualisierter IST-Prozess reduziert offene Fragen: Mit eindeutig beschriebenen Rollen, Übergaben und
+        Informationspakete, sinkt die Wahrscheinlichkeit für Missverständnisse.
+      </p>
+
+      <figure class="card figure-center">
+        <img id="verlustImg" src="images/verlust.png"
+          alt="Symbolbild: Informationsverlust zwischen Teams wird sichtbar gemacht"
+          width="900" height="500">
+
+        <p id="verlustHoverText" class="hover-text">
+          Entnommen aus den Unterlagen der Prozessmanagement-Vorlesung im 2. Semester
+        </p>
+
+        <figcaption>Problemkern: fehlende Standardisierung erzeugt Informationsverluste und Rückfragen.</figcaption>
+      </figure>
+    </main>
+
+    <footer>
+      <p>Quelle: eigene Detailbeschreibung von PT1</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+
+</html>
